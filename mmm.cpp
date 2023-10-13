@@ -17,7 +17,7 @@ int main(){
             int n2 = randomGenerator();
             A[i][j] = n1; 
             B[i][j] = n2; 
-            C[i][j] = n1;
+            C[i][j] = 0;
         }
     }
 
