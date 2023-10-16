@@ -10,14 +10,14 @@ int main(){
     int size = randomGenerator();
     double timeSpentCheck = 0.0;
     double timeSpentMMM = 0.0;
-    float A[size][size], B[size][size], C[size][size], checkMatrix[size][size];
+    double A[size][size], B[size][size], C[size][size], checkMatrix[size][size];
     
     for(int i = 0; i < size; i++){
         for(int j = 0; j < size; j++){
             int n1 = randomGenerator();
             int n2 = randomGenerator();
-            A[i][j] = (float)n1; 
-            B[i][j] = (float)n2; 
+            A[i][j] = (double)n1; 
+            B[i][j] = (double)n2; 
             C[i][j] = 0;
         }
     }
@@ -33,7 +33,7 @@ int main(){
     clock_t endMMM = clock();
 
     clock_t beginCheck = clock();
-    cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, size, size, size, 1.0, &A[0][0], size, &B[0][0], size, 0.0, &checkMatrix[0][0], size);
+    cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, size, size, size, 1.0, &A[0][0], size, &B[0][0], size, 0.0, &checkMatrix[0][0], size);
     clock_t endCheck = clock();
 
     int flag = 1;
