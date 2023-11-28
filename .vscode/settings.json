@@ -4,6 +4,10 @@
         "string_view": "c",
         "format": "c",
         "initializer_list": "c",
-        "span": "c"
+        "span": "c",
+        "chrono": "c",
+        "functional": "c",
+        "bitset": "c",
+        "ratio": "c"
     }
 }
